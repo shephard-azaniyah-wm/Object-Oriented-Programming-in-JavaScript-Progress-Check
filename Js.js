@@ -84,21 +84,23 @@ Popcorn.prototype.displayFoodInfo = function() {
 };
 
 function main() {
-    var food1 = new Food("Sushi", "Japan", "Cold ", 8);
-    food1.displayFoodInfo();
+    var foodArray = [];
 
-    var pizza1 = new Pizza("Pizza", "Italy", "Hot ", 8, 2);
-    pizza1.displayFoodInfo();
 
-    var donut1 = new Donut("Donut", "America", "Hot ", 1, "No");
-    donut1.displayFoodInfo();
 
-    var pretzel1 = new Pretzel("Pretzel", "Germany", "Hot ", 1, "Cinnamon" );
-    pretzel1.displayFoodInfo();
+    foodArray[0] = new Food("Sushi", "Japan", "Cold ", 8);
 
-    var popcorn1 = new Popcorn("Popcorn", "Mexico", "Hot ", 5, "Cheese");
-    popcorn1.displayFoodInfo();
+    foodArray[1] = new Pizza("Pizza", "Italy", "Hot ", 8, 2);
 
+    foodArray[2] = new Donut("Donut", "America", "Hot ", 1, "No");
+
+    foodArray[3] = new Pretzel("Pretzel", "Germany", "Hot ", 1, "Cinnamon" );
+
+    foodArray[4] = new Popcorn("Popcorn", "Mexico", "Hot ", 5, "Cheese");
+
+    for (var i = 0; i < foodArray.length; i++) {
+        foodArray[i].displayFoodInfo();
+    }
 }
 
 
